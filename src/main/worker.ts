@@ -129,7 +129,8 @@ async function axiosDlOne(articleInfo: ArticleInfo, reCall = false) {
       return;
     }
   }
-
+  //修改以重新打包
+  articleInfo.contentUrl = articleInfo.contentUrl.replace(/&amp;/g, '&');
   const gzhInfo = articleInfo.gzhInfo;
   await axios
     .get(articleInfo.contentUrl, {
