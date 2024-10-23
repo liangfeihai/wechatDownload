@@ -1,3 +1,8 @@
+# 修改打包
+需要在 worker.ts 文件的 132 行加上
+articleInfo.contentUrl = articleInfo.contentUrl.replace(/&amp;/g, '&')
+介绍url:https://linux.do/t/topic/158356
+
 # wechatDownload
 
 微信公众号文章下载工具
